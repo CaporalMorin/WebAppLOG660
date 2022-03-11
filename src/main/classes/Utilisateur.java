@@ -1,4 +1,4 @@
-package classes;
+package main.classes;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
