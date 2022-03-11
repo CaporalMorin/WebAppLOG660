@@ -22,7 +22,7 @@ public class CourtierBDFilm{
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
-        String sqlquery = "SELECT * FROM Film WHERE " + criteres;
+        String sqlquery = "SELECT * FROM VUEFILMS WHERE " + criteres;
         System.out.println(sqlquery);
         Query query = session.createSQLQuery(sqlquery);
         query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);

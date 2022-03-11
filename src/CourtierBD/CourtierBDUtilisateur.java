@@ -15,15 +15,15 @@ import static util.utils.readStringFromMap;
 
 public class CourtierBDUtilisateur {
 
-	public Utilisateur connexion(String leCourriel, String leMotDePasse){
+	public Utilisateur connexion(String leCourriel, String leMotDePasse) throws Exception{
 
-		if(leCourriel.isEmpty() || leMotDePasse.isEmpty()){
-			System.out.println("Veuillez entrer une adresse courriel valide.");
-			if(leMotDePasse.isEmpty()){
-				System.out.println("Veuillez entrer un mot de passe valide.");
-			}
-			return null;
+		if(leCourriel.isEmpty()){
+			throw new Exception("Veuillez entrer un courriel.");
 		}
+		if(leMotDePasse.isEmpty() ){
+			throw new Exception("Veuillez entrer un mot de passe.");
+		}
+
 		System.out.println("Tentative de connexion...");
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -38,8 +38,7 @@ public class CourtierBDUtilisateur {
 		List results = query.list();
 
 		if(results.isEmpty()){
-			System.out.println("Erreur: Courriel ou mot de passe invalide");
-			return null;
+			throw new Exception("Informations de connexion invalides.");
 		}
 		else{
 			for(Object o: results){

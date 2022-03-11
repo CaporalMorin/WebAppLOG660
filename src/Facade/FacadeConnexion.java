@@ -11,7 +11,7 @@ public class FacadeConnexion {
 
     public FacadeConnexion(){}
 
-    public Utilisateur connexion(String courriel, String mdp){
+    public Utilisateur connexion(String courriel, String mdp) throws Exception {
         CourtierBDUtilisateur u = new CourtierBDUtilisateur();
         return u.connexion(courriel, mdp);
     }
