@@ -1,6 +1,6 @@
-package Facade;
+package main.Facade;
 
-import CourtierBD.CourtierBDUtilisateur;
+import main.CourtierBD.CourtierBDUtilisateur;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import util.HibernateUtil;
