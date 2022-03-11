@@ -1,12 +1,12 @@
-package Facade;
+package main.Facade;
 
 import util.HibernateUtil;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import classes.*;
+import main.classes.*;
 import java.util.*;
-import CourtierBD.*;
+import main.CourtierBD.*;
 
 public class FacadeLouerFilm {
     private Session session;
