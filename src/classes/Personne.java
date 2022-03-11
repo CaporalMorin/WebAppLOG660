@@ -15,14 +15,13 @@ public class Personne {
     private Set personnagefilmsByNopersonne;
 
     public Personne(){}
-    public Personne(int noPersonne, String nom, String photo, String bio, Time  dateNaissance, String lieuNaissance, Set collection) {
+    public Personne(int noPersonne, String nom, String photo, String bio, Time  dateNaissance, String lieuNaissance) {
         this.nom = nom;
         this.photo = photo;
         this.biographie = bio;
         this.datenaissance = dateNaissance;
         this.lieunaissance = lieuNaissance;
         this.nopersonne = noPersonne;
-        personnagefilmsByNopersonne = collection;
     }
 
     public int getNopersonne() {

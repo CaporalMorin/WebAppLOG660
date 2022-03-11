@@ -1,22 +1,22 @@
 package classes;
 
 public class Genrefilm {
-    private long nofilm;
+    private int nofilm;
     private String genre;
     private Film filmByNofilm;
 
     public Genrefilm(){}
 
-    public Genrefilm(String genre, Film noFilm){
+    public Genrefilm(String genre, int noFilm){
         this.genre = genre;
-        this.filmByNofilm = noFilm;
+        this.nofilm = noFilm;
     }
 
-    public long getNofilm() {
+    public int getNofilm() {
         return nofilm;
     }
 
-    public void setNofilm(long nofilm) {
+    public void setNofilm(int nofilm) {
         this.nofilm = nofilm;
     }
 

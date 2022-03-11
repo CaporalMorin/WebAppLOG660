@@ -3,13 +3,14 @@ package classes;
 
 public class Paysfilm {
     private String pays;
-    private long nofilm;
+    private int nofilm;
     private Film filmByNofilm;
 
     public Paysfilm(){}
-    public Paysfilm(String pays, Film noFilm){
+
+    public Paysfilm(String pays, int noFilm){
         this.pays = pays;
-        this.filmByNofilm = noFilm;
+        this.nofilm = noFilm;
     }
 
 
@@ -21,11 +22,11 @@ public class Paysfilm {
         this.pays = pays;
     }
 
-    public long getNofilm() {
+    public int getNofilm() {
         return nofilm;
     }
 
-    public void setNofilm(long nofilm) {
+    public void setNofilm(int nofilm) {
         this.nofilm = nofilm;
     }
 

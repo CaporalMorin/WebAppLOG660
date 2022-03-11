@@ -8,9 +8,9 @@ public class Annoncefilm {
     public Annoncefilm(){
 
     }
-    public Annoncefilm(String lien, Film noFilm){
+    public Annoncefilm(String lien, int noFilm){
         this.lien = lien;
-        this.filmByNofilm=noFilm;
+        this.nofilm=noFilm;
     }
 
     public String getLien() {

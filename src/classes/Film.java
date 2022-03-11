@@ -12,6 +12,7 @@ public class Film {
     private String resume;
     private String affiche;
     private Long nopersonne;
+
     private Set annoncefilmsByNofilm;
     private Set genrefilmsByNofilm;
     private Set paysfilmsByNofilm;
@@ -20,7 +21,7 @@ public class Film {
 
     public Film(){}
     public Film(int noFilm, String titre, int annee, String langueOriginale, int duree, String resume, String affiche,
-                Set annonces, Set genresFilm, Set paysFilm, Set scenaristeFilm){
+                Set annonces, Set genresFilm, Set paysFilm, Set scenaristeFilm, Set personnagesFilm){
         this.nofilm = noFilm;
         this.titre = titre;
         this.annee = annee;
@@ -32,7 +33,21 @@ public class Film {
         this.genrefilmsByNofilm = genresFilm;
         this.paysfilmsByNofilm = paysFilm;
         this.scenaristefilmsByNofilm = scenaristeFilm;
+        this.personnagefilmsByNofilm = personnagesFilm;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "nofilm=" + nofilm +
+                ", titre='" + titre + '\'' +
+                ", annee=" + annee +
+                ", langueoriginale='" + langueoriginale + '\'' +
+                ", duree=" + duree +
+                ", resume='" + resume + '\'' +
+                ", affiche='" + affiche + '\'' +
+                '}';
     }
 
     public long getNofilm() {

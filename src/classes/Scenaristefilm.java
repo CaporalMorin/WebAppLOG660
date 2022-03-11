@@ -3,12 +3,12 @@ package classes;
 
 public class Scenaristefilm {
     private String nom;
-    private long nofilm;
+    private int nofilm;
     private Film filmByNofilm;
 
     public Scenaristefilm(){}
-    public Scenaristefilm( Film noFilm, String nom){
-        this.filmByNofilm = noFilm;
+    public Scenaristefilm(int noFilm, String nom){
+        this.nofilm = noFilm;
         this.nom = nom;
     }
 
@@ -20,11 +20,11 @@ public class Scenaristefilm {
         this.nom = nom;
     }
 
-    public long getNofilm() {
+    public int getNofilm() {
         return nofilm;
     }
 
-    public void setNofilm(long nofilm) {
+    public void setNofilm(int nofilm) {
         this.nofilm = nofilm;
     }
 

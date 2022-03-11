@@ -15,7 +15,7 @@ public class Utilisateur {
     private Adresse adresse;
 
     public Utilisateur(){}
-    public Utilisateur( int noSequence, String nom, String prenom, String courriel, String noTelephone, String motDePasse, Time  dateNaissance, Adresse adresse, Time actualDate){
+    public Utilisateur( int noSequence, String nom, String prenom, String courriel, String noTelephone, String motDePasse, Time dateNaissance, Adresse adresse, Time actualDate){
         this.courriel = courriel;
         this.notelephone = noTelephone;
         this.motdepasse = motDePasse;
@@ -98,6 +98,7 @@ public class Utilisateur {
     public void setActualDate(Time actualDate) {
         this.actualDate = actualDate;
     }
+
 
 
 }

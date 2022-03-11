@@ -11,7 +11,6 @@ public class Personnagefilm {
 
     }
     public Personnagefilm(int noPersonnage,  String nom, Personne personne){
-
         this.nopersonnage = noPersonnage;
         this.nom = nom;
         this.personneByNopersonne = personne;

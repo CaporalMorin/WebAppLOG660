@@ -21,15 +21,13 @@ public class FacadeLouerFilm {
         }
     }
 
-    public List rechercherFilms(String titre, String realisateur, ArrayList<Personne> acteurs, String pays, String langue, String genre ){
-        CourtierBDFilm courtierBDFilm = new CourtierBDFilm(session);
-
-        return courtierBDFilm.chercherFilm(titre, realisateur, acteurs, pays, langue, genre);
-
+    public List rechercherFilms(String criteres){
+        CourtierBDFilm courtierBDFilm = new CourtierBDFilm();
+        return courtierBDFilm.chercherFilm(criteres);
     }
-    
+
     public void closeSession(){
-		if(session.isOpen())
-			session.close();
-	}
+        if(session.isOpen())
+            session.close();
+    }
 }
