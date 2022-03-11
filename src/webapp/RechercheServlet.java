@@ -171,7 +171,7 @@ public class RechercheServlet extends HttpServlet {
                 out.println("<td>" + f.getDuree() +"</td>");
 
                 out.println("<td>");
-                out.println("<button onclick=\"location.href='http://localhost:8080/consulter?noFilm=" + f.getNofilm()+ "'\">Consulter</button>");
+                out.println("<button onclick=\"location.href='http://localhost:8080/WebAppLOG660/consulterServlet?noFilm=" + f.getNofilm()+ "'\">Consulter</button>");
                 out.println("</td>");
 
                 out.println("</tr>");
