@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Personne" table="PERSONNE" schema="EQUIPE205">
+        <id name="nopersonne" type="int">
+            <column name="NOPERSONNE" precision="2147483646"/>
+        </id>
+        <property name="nom" type="string">
+            <column name="NOM" length="50" not-null="true"/>
+        </property>
+        <property name="photo" type="string">
+            <column name="PHOTO" length="2000" not-null="true"/>
+        </property>
+        <property name="biographie" type="org.hibernate.type.StringClobType">
+            <column name="BIOGRAPHIE" not-null="true"/>
+        </property>
+        <property name="datenaissance" type="date">
+            <column name="DATENAISSANCE" not-null="true"/>
+        </property>
+        <property name="lieunaissance" type="string">
+            <column name="LIEUNAISSANCE" length="100" not-null="true"/>
+        </property>
+        <set name="personnagefilmsByNopersonne" inverse="true">
+            <key>
+                <column name="NOPERSONNE"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Personnagefilm"/>
+        </set>
+    </class>
+</hibernate-mapping>

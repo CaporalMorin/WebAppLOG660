@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Location" table="LOCATION" schema="EQUIPE205">
+        <id name="nolocation" type="int">
+            <column name="NOLOCATION" precision="2147483646"/>
+        </id>
+        <property name="noexemplaire" type="int">
+            <column name="NOEXEMPLAIRE"  precision="2147483646"/>
+        </property>
+        <property name="datedebut" type="date">
+            <column name="DATEDEBUT" />
+        </property>
+        <property name="datefin" type="date">
+            <column name="DATEFIN" />
+        </property>
+        <many-to-one name="clientByNosequence" class="classes.Client">
+            <column name="NOSEQUENCE"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

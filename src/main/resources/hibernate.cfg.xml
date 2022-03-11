@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="hibernate.connection.username">EQUIPE205</property>
+    <property name="hibernate.connection.password">6TfrPenZ</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@log660ora12c.logti.etsmtl.ca:1521:LOG660</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+    <property name="hibernate.default_schema">EQUIPE205</property>
+    <property name="hibernate.transaction.auto_close_session">false</property>
+
+
+    <mapping resource="Adresse.hbm.xml"/>
+    <mapping resource="Annoncefilm.hbm.xml"/>
+    <mapping resource="Cartecredit.hbm.xml"/>
+    <mapping resource="Client.hbm.xml"/>
+    <mapping resource="Exemplaire.hbm.xml"/>
+    <mapping resource="Film.hbm.xml"/>
+    <mapping resource="Forfait.hbm.xml"/>
+    <mapping resource="Genrefilm.hbm.xml"/>
+    <mapping resource="Location.hbm.xml"/>
+    <mapping resource="Paysfilm.hbm.xml"/>
+    <mapping resource="Personnagefilm.hbm.xml"/>
+    <mapping resource="Personne.hbm.xml"/>
+    <mapping resource="Scenaristefilm.hbm.xml"/>
+    <mapping resource="Utilisateur.hbm.xml"/>
+
+
+  </session-factory>
+</hibernate-configuration>

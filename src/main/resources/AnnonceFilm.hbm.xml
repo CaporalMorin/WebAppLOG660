@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Annoncefilm" table="ANNONCEFILM" schema="EQUIPE205">
+        <composite-id mapped="true" class="classes.AnnoncefilmPK">
+            <key-property name="lien" type="string">
+                <column name="LIEN" length="1000"/>
+            </key-property>
+            <key-property name="nofilm" type="int">
+                <column name="NOFILM" precision="2147483646"/>
+            </key-property>
+        </composite-id>
+        <many-to-one name="filmByNofilm" class="classes.Film">
+            <column name="NOFILM"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Exemplaire" table="EXEMPLAIRE" schema="EQUIPE205">
+        <id name="noexemplaire" type="int">
+            <column name="NOEXEMPLAIRE" precision="2147483646"/>
+        </id>
+        <property name="disponible" type="int">
+            <column name="DISPONIBLE" precision="2147483646" not-null="true"/>
+        </property>
+        <property name="nofilm" type="int">
+            <column name="NOFILM" precision="2147483646" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

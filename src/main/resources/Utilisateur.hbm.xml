@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Utilisateur" table="UTILISATEUR" schema="EQUIPE205">
+        <id name="nosequence" type="int">
+            <column name="NOSEQUENCE"  precision="2147483646"/>
+        </id>
+        <property name="nom" type="string">
+            <column name="NOM" length="200"/>
+        </property>
+        <property name="prenom" type="string">
+            <column name="PRENOM" length="200"/>
+        </property>
+        <property name="courriel" type="string">
+            <column name="COURRIEL" length="400"/>
+        </property>
+        <property name="notelephone" type="string">
+            <column name="NOTELEPHONE"  length="20"/>
+        </property>
+        <property name="motdepasse" type="string">
+            <column name="MOTDEPASSE" length="100"/>
+        </property>
+        <property name="datenaissance" type="date">
+            <column name="DATENAISSANCE" />
+        </property>
+        <property name="actualDate" type="date">
+            <column name="ACTUAL_DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

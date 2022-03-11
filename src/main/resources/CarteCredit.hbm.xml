@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Cartecredit" table="CARTECREDIT" schema="EQUIPE205">
+        <id name="nocartecredit" type="string">
+            <column name="NOCARTECREDIT" sql-type="varchar2(20)" length="20"/>
+        </id>
+        <property name="letype" type="string">
+            <column name="LETYPE" length="25"/>
+        </property>
+        <property name="dateexpiration" type="date">
+            <column name="DATEEXPIRATION" />
+        </property>
+        <property name="cvv" type="int">
+            <column name="CVV"  precision="2147483646"/>
+        </property>
+        <property name="actualDate" type="date">
+            <column name="ACTUAL_DATE" />
+        </property>
+        <many-to-one name="clientByNosequence" class="classes.Client">
+            <column name="NOSEQUENCE"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

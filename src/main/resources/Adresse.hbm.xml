@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Adresse" table="ADRESSE" >
+        <id name="noadresse" type="string">
+            <column name="NOADRESSE"  precision="2147483646"/>
+        </id>
+        <property name="adresse" type="string">
+            <column name="ADRESSE"  length="200"/>
+        </property>
+        <property name="ville" type="string">
+            <column name="VILLE" length="50"/>
+        </property>
+        <property name="province" type="string">
+            <column name="PROVINCE" length="50"/>
+        </property>
+        <property name="codepostal" type="string">
+            <column name="CODEPOSTAL" length="7"/>
+        </property>
+        <many-to-one name="clientByNosequence" class="classes.Client">
+            <column name="NOSEQUENCE"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

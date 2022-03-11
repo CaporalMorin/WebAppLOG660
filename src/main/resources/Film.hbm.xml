@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Film" table="FILM" schema="EQUIPE205">
+        <id name="nofilm" type="int">
+            <column name="NOFILM" precision="2147483646"/>
+        </id>
+        <property name="titre" type="string">
+            <column name="TITRE" sql-type="varchar2(200)" length="200"/>
+        </property>
+        <property name="annee" type="int">
+            <column name="ANNEE" sql-type="number(*)" precision="2147483646"/>
+        </property>
+        <property name="langueoriginale" type="string">
+            <column name="LANGUEORIGINALE" length="200" not-null="true"/>
+        </property>
+        <property name="duree" type="int">
+            <column name="DUREE" precision="2147483646" not-null="true"/>
+        </property>
+        <property name="resume" type="org.hibernate.type.StringClobType">
+            <column name="RESUME" not-null="true"/>
+        </property>
+        <property name="affiche" type="string">
+            <column name="AFFICHE"  length="2000" not-null="true"/>
+        </property>
+        <property name="nopersonne" type="int">
+            <column name="NOPERSONNE" sql-type="number(*)" precision="2147483646" not-null="true"/>
+        </property>
+        <set name="annoncefilmsByNofilm" inverse="true">
+            <key>
+                <column name="NOFILM"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Annoncefilm"/>
+        </set>
+        <set name="genrefilmsByNofilm" inverse="true">
+            <key>
+                <column name="NOFILM"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Genrefilm"/>
+        </set>
+        <set name="paysfilmsByNofilm" inverse="true">
+            <key>
+                <column name="NOFILM"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Paysfilm"/>
+        </set>
+        <set name="personnagefilmsByNofilm" inverse="true">
+            <key>
+                <column name="NOFILM"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Personnagefilm"/>
+        </set>
+        <set name="scenaristefilmsByNofilm" inverse="true">
+            <key>
+                <column name="NOFILM"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Scenaristefilm"/>
+        </set>
+    </class>
+</hibernate-mapping>

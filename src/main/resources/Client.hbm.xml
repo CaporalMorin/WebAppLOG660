@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Client" table="CLIENT" schema="EQUIPE205">
+        <id name="nosequence" type="int">
+            <column name="NOSEQUENCE" precision="2147483646"/>
+        </id>
+
+        <set name="cartecreditsByNosequence" inverse="true">
+            <key>
+                <column name="NOSEQUENCE"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Cartecredit"/>
+        </set>
+        <set name="locationsByNosequence" inverse="true">
+            <key>
+                <column name="NOSEQUENCE"/>
+            </key>
+            <one-to-many not-found="ignore" class="classes.Location"/>
+        </set>
+    </class>
+</hibernate-mapping>

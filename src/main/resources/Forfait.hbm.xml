@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="classes.Forfait" table="FORFAIT" schema="EQUIPE205">
+        <id name="code" type="string">
+            <column name="CODE" length="1"/>
+        </id>
+        <property name="type" type="string">
+            <column name="TYPE"  length="25"/>
+        </property>
+        <property name="cout" type="int">
+            <column name="COUT"  precision="2147483646"/>
+        </property>
+        <property name="locationmax" type="int">
+            <column name="LOCATIONMAX"  precision="2147483646"/>
+        </property>
+        <property name="dureemax" type="int">
+            <column name="DUREEMAX"  precision="2147483646"/>
+        </property>
+    </class>
+</hibernate-mapping>
