@@ -1,7 +1,7 @@
-package main.CourtierBD;
+package CourtierBD;
 
-import main.classes.Film;
-import main.classes.Personne;
+import classes.Film;
+import classes.Personne;
 import org.hibernate.Session;
 
 import java.util.ArrayList;

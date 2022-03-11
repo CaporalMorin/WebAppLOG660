@@ -1,4 +1,4 @@
-package main.CourtierBD;
+package CourtierBD;
 
 import org.hibernate.Session;
 

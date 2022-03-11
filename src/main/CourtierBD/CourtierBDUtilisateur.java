@@ -1,6 +1,6 @@
-package main.CourtierBD;
+package CourtierBD;
 
-import main.classes.Utilisateur;
+import classes.Utilisateur;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
