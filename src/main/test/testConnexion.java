@@ -1,7 +1,7 @@
 package main.test;
 import java.io.Serializable;
 
-import main.Facade.FacadeConnexion;
+import Facade.FacadeConnexion;
 
 public class testConnexion implements Serializable{
 
