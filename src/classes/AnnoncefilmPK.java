@@ -1,21 +1,23 @@
-package main.classes;
+package classes;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-public class ScenaristefilmPK implements Serializable {
-    private String nom;
+public class AnnoncefilmPK implements Serializable {
+    private String lien;
     private long nofilm;
 
-    @Column(name = "NOM", nullable = false, length = 200)
+
+
+    @Column(name = "LIEN", nullable = false, length = 1000)
     @Id
-    public String getNom() {
-        return nom;
+    public String getLien() {
+        return lien;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setLien(String lien) {
+        this.lien = lien;
     }
 
     @Column(name = "NOFILM", nullable = false, precision = 0)
@@ -33,17 +35,17 @@ public class ScenaristefilmPK implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ScenaristefilmPK that = (ScenaristefilmPK) o;
+        AnnoncefilmPK that = (AnnoncefilmPK) o;
 
         if (nofilm != that.nofilm) return false;
-        if (nom != null ? !nom.equals(that.nom) : that.nom != null) return false;
+        if (lien != null ? !lien.equals(that.lien) : that.lien != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = nom != null ? nom.hashCode() : 0;
+        int result = lien != null ? lien.hashCode() : 0;
         result = 31 * result + (int) (nofilm ^ (nofilm >>> 32));
         return result;
     }

@@ -1,4 +1,4 @@
-package main.classes;
+package classes;
 
 public class Annoncefilm {
     private String lien;

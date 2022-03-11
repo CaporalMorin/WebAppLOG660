@@ -1,6 +1,4 @@
-package main.classes;
-
-import javax.persistence.*;
+package classes;
 
 public class Adresse {
     private long noadresse;

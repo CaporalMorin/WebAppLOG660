@@ -1,6 +1,5 @@
-package main.classes;
+package classes;
 
-import javax.persistence.*;
 import java.sql.Time;
 
 

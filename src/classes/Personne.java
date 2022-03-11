@@ -1,4 +1,4 @@
-package main.classes;
+package classes;
 
 import java.sql.Time;
 import java.util.Collection;

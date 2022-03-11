@@ -1,24 +1,12 @@
-package main.classes;
+package classes;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-public class AnnoncefilmPK implements Serializable {
-    private String lien;
+public class GenrefilmPK implements Serializable {
     private long nofilm;
-
-
-
-    @Column(name = "LIEN", nullable = false, length = 1000)
-    @Id
-    public String getLien() {
-        return lien;
-    }
-
-    public void setLien(String lien) {
-        this.lien = lien;
-    }
+    private String genre;
 
     @Column(name = "NOFILM", nullable = false, precision = 0)
     @Id
@@ -30,23 +18,33 @@ public class AnnoncefilmPK implements Serializable {
         this.nofilm = nofilm;
     }
 
+    @Column(name = "GENRE", nullable = false, length = 100)
+    @Id
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        AnnoncefilmPK that = (AnnoncefilmPK) o;
+        GenrefilmPK that = (GenrefilmPK) o;
 
         if (nofilm != that.nofilm) return false;
-        if (lien != null ? !lien.equals(that.lien) : that.lien != null) return false;
+        if (genre != null ? !genre.equals(that.genre) : that.genre != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = lien != null ? lien.hashCode() : 0;
-        result = 31 * result + (int) (nofilm ^ (nofilm >>> 32));
+        int result = (int) (nofilm ^ (nofilm >>> 32));
+        result = 31 * result + (genre != null ? genre.hashCode() : 0);
         return result;
     }
 }

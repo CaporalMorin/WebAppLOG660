@@ -1,6 +1,4 @@
-package main.classes;
-
-import javax.persistence.*;
+package classes;
 
 public class Genrefilm {
     private long nofilm;
