@@ -9,25 +9,16 @@ import java.util.*;
 import CourtierBD.*;
 
 public class FacadeLouerFilm {
-    private Session session;
-
-    public FacadeLouerFilm() throws Exception{
-        try {
-            session = HibernateUtil.getSessionFactory().openSession();
-
-        }catch(HibernateException e){
-            e.printStackTrace();
-            System.exit(1);
-        }
-    }
 
     public List rechercherFilms(String criteres){
         CourtierBDFilm courtierBDFilm = new CourtierBDFilm();
         return courtierBDFilm.chercherFilm(criteres);
     }
 
-    public void closeSession(){
-        if(session.isOpen())
-            session.close();
+    public Boolean louer(int noFilm, String c){
+        System.out.println("Test2");
+        CourtierBDLocation l = new CourtierBDLocation();
+        return l.locationFilm(noFilm, c);
     }
+
 }
