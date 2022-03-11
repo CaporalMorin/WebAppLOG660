@@ -14,18 +14,18 @@
 
 
     <mapping resource="Adresse.hbm.xml"/>
-    <mapping resource="Annoncefilm.hbm.xml"/>
-    <mapping resource="Cartecredit.hbm.xml"/>
+    <mapping resource="AnnonceFilm.hbm.xml"/>
+    <mapping resource="CarteCredit.hbm.xml"/>
     <mapping resource="Client.hbm.xml"/>
     <mapping resource="Exemplaire.hbm.xml"/>
     <mapping resource="Film.hbm.xml"/>
     <mapping resource="Forfait.hbm.xml"/>
-    <mapping resource="Genrefilm.hbm.xml"/>
+    <mapping resource="GenreFilm.hbm.xml"/>
     <mapping resource="Location.hbm.xml"/>
-    <mapping resource="Paysfilm.hbm.xml"/>
-    <mapping resource="Personnagefilm.hbm.xml"/>
+    <mapping resource="PaysFilm.hbm.xml"/>
+    <mapping resource="PersonnageFilm.hbm.xml"/>
     <mapping resource="Personne.hbm.xml"/>
-    <mapping resource="Scenaristefilm.hbm.xml"/>
+    <mapping resource="ScenaristeFilm.hbm.xml"/>
     <mapping resource="Utilisateur.hbm.xml"/>
 
 
